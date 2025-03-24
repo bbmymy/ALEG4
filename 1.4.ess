@@ -1,13 +1,27 @@
 start
 new chis number
-set chis 13
+set chis 22
 new del number
-set del 4
+set del 7
  new i number
 set i 0
    loop a (chis>del)
      set chis chis-del
      set i i+1
    end a
-log string i >> "," >> chis >> "/" >> del
+new i_two number
+set i_two 0
+new ostatok number
+set ostatok 0
+  loop b (10000>i)
+   set ostatok ostatok + chis
+  end b
+new i_three number
+set i_three 0
+  loop c (ostatok>7)
+   set ostatok ostatok - del
+   set i_three i_three + 1
+end c
+
+log string i >> "." >> i_three
 finish
